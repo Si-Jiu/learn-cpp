@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Build and Debug",
+            "program": "${workspaceFolder}/build/${fileBasenameNoExtension}.out",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build C++ File",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug only",
+            "program": "${workspaceFolder}/build/${fileBasenameNoExtension}.out",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}
