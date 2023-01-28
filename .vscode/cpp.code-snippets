@@ -1,0 +1,30 @@
+{
+    "万能模板": {
+        "prefix": "model",
+        "body": [
+            "/**$1",
+            "#include <cstdio>",
+            "",
+            "using namespace std;",
+            "",
+            "int main()",
+            "{",
+            "    $0",
+            "",
+            "    return 0;",
+            "}"
+        ]
+    },
+    "函数": {
+        "prefix": "function",
+        "body": [
+            "/**$4",
+            "${1|int,void,bool,long,long long,float,double|} $2($3)",
+            "{",
+            "$0",
+            "",
+            "return $1;",
+            "}"
+        ],
+    }
+}
