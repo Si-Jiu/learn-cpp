@@ -18,6 +18,9 @@
     "editor.formatOnType": true,
     "editor.acceptSuggestionOnEnter": "smart",
     "editor.suggest.preview": true,
+    "files.associations": {
+        ".clang-format": "yaml"
+    },
     "files.autoSave": "afterDelay",
     "files.autoGuessEncoding": true,
     "files.insertFinalNewline": true,
@@ -50,5 +53,7 @@
     "powermode.combo.location": "off",
     "powermode.combo.counterEnabled": "hide",
     "powermode.combo.timerEnabled": "hide",
-    "powermode.shake.enabled": false
+    "powermode.shake.enabled": false,
+    "luogu.defaultWaitingTime": 1500,
+    "luogu.effectiveDuration": 1
 }

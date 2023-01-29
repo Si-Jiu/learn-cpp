@@ -13,7 +13,14 @@ using namespace std;
 
 int main()
 {
-    short aaa;
+    short count = 0;
+    cout << "short a[]={";
+    for (short i = 1; i <= 100; i++)
+    {
+        count += i;
+        cout << count << ',';
+    }
+    cout << '}';
 
     return 0;
 }

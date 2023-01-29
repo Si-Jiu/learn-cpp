@@ -16,14 +16,14 @@
         ]
     },
     "函数": {
-        "prefix": "function",
+        "prefix": "func",
         "body": [
             "/**$4",
             "${1|int,void,bool,long,long long,float,double|} $2($3)",
             "{",
-            "$0",
+            "    $0",
             "",
-            "return $1;",
+            "    return ; // Type: $1",
             "}"
         ],
     }
