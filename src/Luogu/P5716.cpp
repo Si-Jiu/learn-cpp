@@ -39,7 +39,7 @@ int main()
     }
     else
     {
-        printf("%hd", days[month-1]);
+        printf("%hd", days[month - 1]);
     }
 
     return 0;
