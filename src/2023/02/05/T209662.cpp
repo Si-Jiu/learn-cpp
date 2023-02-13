@@ -16,7 +16,7 @@ using namespace std;
 int main()
 {
     // 变量
-    bool bits[32] = {};
+    short bits[32] = {};
     unsigned int a;
     short index = 0, position = 31;
 

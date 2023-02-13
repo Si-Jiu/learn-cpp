@@ -1,5 +1,5 @@
 /**
- * @file test.cpp
+ * @file P5704.cpp
  * @author 肆鸠 (si_jiu49@outlook.com)
  * @brief
  * @version 0.1
@@ -15,14 +15,9 @@ using namespace std;
 
 int main()
 {
-    int a = 1;
-    for (short i = 0; i < 31; i++)
-    {
-        a *= 2;
-    }
-    a -= 1;
-    cout << a << endl;
-    cout << a + 1 << endl;
+    char a;
+    cin >> a;
+    cout << char(a + 'A' - 'a') << endl;
 
     return 0;
 }
