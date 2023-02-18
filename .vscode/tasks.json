@@ -6,11 +6,12 @@
             "label": "Build C++ File",
             "command": "clang++",
             "args": [
+                "--target=x86_64-w64-windows-gnu",
                 "-g",
                 "-Wall",
                 "-std=c++20",
                 "-o",
-                "${workspaceFolder}/build/${fileBasenameNoExtension}.out",
+                "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
                 "${file}"
             ],
             "group": {
