@@ -37,7 +37,7 @@
             "    while (changed)",
             "    {",
             "        changed = false;",
-            "        for (int i = 0; i < n - 1; i++)",
+            "        for (int i = 1; i < n; i++)",
             "        {",
             "            if (data[i] > data[i + 1])",
             "            {",
@@ -48,6 +48,26 @@
             "    }",
             "}"
         ]
+    },
+    "插入排序": {
+        "prefix": "insertion",
+        "body": [
+            "void insertion_sort(int arr[], int len)",
+            "{",
+            "    for (int i = 1; i < len; i++)",
+            "    {",
+            "        int pickUp = arr[i];",
+            "        int j = i - 1;",
+            "        while ((j >= 0) && (pickUp < arr[j]))",
+            "        {",
+            "            arr[j + 1] = arr[j];",
+            "            j--;",
+            "        }",
+            "        arr[j + 1] = pickUp;",
+            "    }",
+            "}"
+        ],
+        "description": "插入排序"
     },
     "sort函数的comp": {
         "prefix": "comp",
