@@ -29,7 +29,7 @@
     "workbench.list.smoothScrolling": true,
     "workbench.reduceMotion": "off",
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "One Dark Pro Mix",
+    "workbench.colorTheme": "MacOS Modern Dark - Ventura Xcode Civic",
     "workbench.iconTheme": "vscode-icons",
     "debug.console.closeOnEnd": true,
     "debug.console.acceptSuggestionOnEnter": "on",
@@ -42,7 +42,8 @@
     "clangd.arguments": [
         "--clang-tidy",
         "--pch-storage=memory",
-        "--background-index"
+        "--background-index",
+        "--query-driver=E:\\mingw64\\bin\\g++*"
     ],
     "clangd.checkUpdates": true,
     "luogu.defaultLanguage": "C++20",
