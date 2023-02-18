@@ -26,6 +26,36 @@
             "",
             "    return ; // Type: $1",
             "}"
-        ],
+        ]
+    },
+    "冒泡排序": {
+        "prefix": "bubble",
+        "body": [
+            "void bubble_sort(int data[], int n)",
+            "{",
+            "    bool changed = true;",
+            "    while (changed)",
+            "    {",
+            "        changed = false;",
+            "        for (int i = 0; i < n - 1; i++)",
+            "        {",
+            "            if (data[i] > data[i + 1])",
+            "            {",
+            "                swap(data[i], data[i + 1]);",
+            "                changed = true;",
+            "            }",
+            "        }",
+            "    }",
+            "}"
+        ]
+    },
+    "sort函数的comp": {
+        "prefix": "comp",
+        "body": [
+            "bool comp(const $1 &a, const $1 &b)",
+            "{",
+            "    return a < b;",
+            "}"
+        ]
     }
 }
