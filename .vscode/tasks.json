@@ -3,10 +3,27 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "Build C++ File",
+            "label": "Build by clang++",
             "command": "clang++",
             "args": [
                 "--target=x86_64-w64-windows-gnu",
+                "-g",
+                "-Wall",
+                "-std=c++20",
+                "-o",
+                "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Bulid by g++",
+            "command": "g++",
+            "args": [
                 "-g",
                 "-Wall",
                 "-std=c++20",

@@ -1,6 +1,9 @@
 {
     "clangd.arguments": [
         "--clang-tidy",
+        "--all-scopes-completion",
+        "--completion-style=detailed",
+        "--header-insertion=iwyu",
         "--pch-storage=memory",
         "--background-index",
     ]

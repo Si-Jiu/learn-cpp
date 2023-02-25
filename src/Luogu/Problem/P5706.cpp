@@ -1,5 +1,5 @@
 /**
- * @file P5703.cpp
+ * @file P5706.cpp
  * @author 肆鸠 (si_jiu49@outlook.com)
  * @brief
  * @version 0.1
@@ -15,9 +15,11 @@ using namespace std;
 
 int main()
 {
-    unsigned int a, b;
-    cin >> a >> b;
-    cout << a*b;
+    float t;
+    short n;
+    cin >> t >> n;
+    printf("%.3f\n", t / n);
+    cout << n * 2;
 
     return 0;
 }

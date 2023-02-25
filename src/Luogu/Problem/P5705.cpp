@@ -1,5 +1,5 @@
 /**
- * @file P5703.cpp
+ * @file P5705.cpp
  * @author 肆鸠 (si_jiu49@outlook.com)
  * @brief
  * @version 0.1
@@ -15,9 +15,9 @@ using namespace std;
 
 int main()
 {
-    unsigned int a, b;
-    cin >> a >> b;
-    cout << a*b;
+    string a;
+    cin >> a;
+    cout << a[4] << a[3] << a[2] << a[1] << a[0];
 
     return 0;
 }

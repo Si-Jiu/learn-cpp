@@ -1,5 +1,5 @@
 /**
- * @file P5703.cpp
+ * @file B2025.cpp
  * @author 肆鸠 (si_jiu49@outlook.com)
  * @brief
  * @version 0.1
@@ -15,9 +15,13 @@ using namespace std;
 
 int main()
 {
-    unsigned int a, b;
-    cin >> a >> b;
-    cout << a*b;
+    cout << R"(  *
+ ***
+*****
+ ***
+  *
+
+)";
 
     return 0;
 }

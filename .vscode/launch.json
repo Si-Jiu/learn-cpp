@@ -4,21 +4,22 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Build and Debug",
+            "name": "clang++",
             "program": "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "Build C++ File",
+            "preLaunchTask": "Build by clang++",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
         },
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug only",
+            "name": "g++",
             "program": "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build by g++",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
         }

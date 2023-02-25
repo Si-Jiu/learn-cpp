@@ -1,5 +1,5 @@
 /**
- * @file P5703.cpp
+ * @file P5708.cpp
  * @author 肆鸠 (si_jiu49@outlook.com)
  * @brief
  * @version 0.1
@@ -8,16 +8,19 @@
  * @copyright Copyright (c) 2023
  *
  */
+#include <cmath>
 #include <cstdio>
 #include <iostream>
+
 
 using namespace std;
 
 int main()
 {
-    unsigned int a, b;
-    cin >> a >> b;
-    cout << a*b;
+    double a, b, c, p;
+    cin >> a >> b >> c;
+    p = 0.5 * (a + b + c);
+    printf("%.1f", sqrt(p * (p - a) * (p - b) * (p - c)));
 
     return 0;
 }
