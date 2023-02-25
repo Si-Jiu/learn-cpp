@@ -8,6 +8,7 @@
  * @copyright Copyright (c) 2023
  *
  */
+#include <cmath>
 #include <cstdio>
 #include <iostream>
 
@@ -15,7 +16,7 @@ using namespace std;
 
 void insertion_sort(int arr[], int len)
 {
-    
+    cout << arr[0] << ' ';
     for (int i = 1; i < len; i++)
     {
         int pickUp = arr[i];
@@ -26,9 +27,9 @@ void insertion_sort(int arr[], int len)
             j--;
         }
         arr[j + 1] = pickUp;
+        cout << arr[int(ceil(i / 2))] << ' ';
     }
 }
-
 
 int main()
 {
@@ -40,10 +41,6 @@ int main()
         cin >> data[i];
     }
     insertion_sort(data, n);
-    for (short i = 0; i < n; i++)
-    {
-        cout << data[i] << ' ';
-    }
 
     return 0;
 }
