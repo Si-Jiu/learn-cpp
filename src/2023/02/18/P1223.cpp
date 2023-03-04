@@ -8,41 +8,39 @@
  * @copyright Copyright (c) 2023
  *
  */
+#include <algorithm>
 #include <cstdio>
 #include <iostream>
 
 using namespace std;
 
-double bubble_sort(int data[], int n)
+struct people
 {
-    bool changed = true;
-    unsigned long long sum = 0;
-    while (changed)
-    {
-        changed = false;
-        for (int i = 1; i < n; i++)
-        {
-            sum += data[i];
-            if (data[i] < data[i + 1])
-            {
-                swap(data[i], data[i + 1]);
-                changed = true;
-            }
-        }
-    }
-    return sum * 1.0 / n;
+    int time;
+    short num;
+};
+bool comp(const people &a, const people &b)
+{
+    return a.time < b.time;
 }
-
 int main()
 {
     short n;
     cin >> n;
-    int time[n];
+    people time[n];
     for (short index = 0; index < n; index++)
     {
-        cin >> time[index];
+        cin >> time[index].time;
+        time[index].num = index + 1;
     }
-    printf("%.2lf", bubble_sort(time, n));
+    sort(time, time + n, comp);
+    unsigned long long sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        sum += time[i].time * (n - i - 1);
+        std::cout << time[i].num << ' ';
+    }
+    printf("\n%.2lf", sum * 1.0 / n);
 
     return 0;
 }

@@ -3,7 +3,7 @@
  * @author 肆鸠 (si_jiu49@outlook.com)
  * @brief
  * @version 0.1
- * @date 2023-02-12
+ * @date 2023-03-02
  *
  * @copyright Copyright (c) 2023
  *
@@ -15,14 +15,7 @@ using namespace std;
 
 int main()
 {
-    int a = 1;
-    for (short i = 0; i < 31; i++)
-    {
-        a *= 2;
-    }
-    a -= 1;
-    cout << a << endl;
-    cout << a + 1 << endl;
+    cout << "UNICODE测试";
 
     return 0;
 }
