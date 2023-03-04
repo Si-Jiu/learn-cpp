@@ -27,9 +27,7 @@ int main()
         cin >> q[index];
     sort(a, a + n);
     for (int index = 0; index < m; index++)
-    {
         cout << upper_bound(a, a + n, q[index]) - lower_bound(a, a + n, q[index]) << ' ';
-    }
 
     return 0;
 }
