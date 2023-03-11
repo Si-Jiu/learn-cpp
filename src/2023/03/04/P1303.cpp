@@ -1,9 +1,9 @@
 /**
- * @file T203473.cpp
+ * @file P1303.cpp
  * @author 肆鸠 (si_jiu49@outlook.com)
  * @brief
  * @version 0.1
- * @date 2023-03-04
+ * @date 2023-03-05
  *
  * @copyright Copyright (c) 2023
  *
@@ -14,34 +14,39 @@
 
 using namespace std;
 
-short a[505], b[505], c[505];
+const int LEN = 2005;
+
+short a[LEN], b[LEN], c[LEN+LEN+30];
 
 void read(short num[])
 {
-    memset(num, 0, 1010);
+    memset(num, 0, 2*(LEN+LEN));
     string temp;
     cin >> temp;
     for (short i = 0, j = temp.length() - 1; i < temp.length(); i++, j--)
-        num[j] = temp[i] - '0';
+        num[j] = temp[i] - 48;
 }
 
-void add()
+void mul()
 {
-    memset(c, 0, 1010);
-    for (int i = 0; i < 505; i++)
+    memset(c, 0, 2 * (LEN + LEN));
+    for (int i = 0; i < LEN; i++)
     {
-        c[i] += a[i] + b[i];
-        if (c[i] >= 10)
+        for (int j = 0; j < LEN; j++)
         {
-            c[i + 1]++;
-            c[i] -= 10;
+            c[i + j] += a[i] * b[j];
+            if (c[i + j] >= 10)
+            {
+                c[i + j + 1] += c[i + j] / 10;
+                c[i + j] %= 10;
+            }
         }
     }
 }
 
 void print()
 {
-    int pos = 504;
+    int pos = (LEN+LEN) - 1;
     while (pos > 0 && c[pos] == 0)
         pos--;
     for (int i = pos; i >= 0; i--)
@@ -52,7 +57,7 @@ int main()
 {
     read(a);
     read(b);
-    add();
+    mul();
     print();
 
     return 0;

@@ -3,44 +3,29 @@
  * @author 肆鸠 (si_jiu49@outlook.com)
  * @brief
  * @version 0.1
- * @date 2023-01-29
+ * @date 2023-03-11
  *
  * @copyright Copyright (c) 2023
  *
  */
 #include <cstdio>
+#include <iostream>
 
 using namespace std;
 
-/**
- * @brief 判断是否为闰年
- *
- * @param year 要判断的年份
- * @return true 是
- * @return false 不是
- */
-bool IsLeap(short year)
+short month[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}, y, m;
+
+void leap()
 {
-    if (year % 4 == 0 || (year % 100 == 0 && year % 400 == 0))
-    {
-        return true;
-    }
-    return false;
+    if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)
+        month[1]++;
 }
 
 int main()
 {
-    short days[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    short year, month;
-    scanf("%hd %hd", &year, &month);
-    if (month == 2 && IsLeap(year))
-    {
-        printf("29");
-    }
-    else
-    {
-        printf("%hd", days[month - 1]);
-    }
+    cin >> y >> m;
+    leap();
+    cout << month[m - 1];
 
     return 0;
 }

@@ -1,9 +1,9 @@
 /**
- * @file T203473.cpp
+ * @file P1480.cpp
  * @author 肆鸠 (si_jiu49@outlook.com)
  * @brief
  * @version 0.1
- * @date 2023-03-04
+ * @date 2023-03-05
  *
  * @copyright Copyright (c) 2023
  *
@@ -14,7 +14,10 @@
 
 using namespace std;
 
-short a[505], b[505], c[505];
+const int LEN = 5000;
+
+short a[LEN], c[LEN];
+long long b;
 
 void read(short num[])
 {
@@ -25,23 +28,22 @@ void read(short num[])
         num[j] = temp[i] - '0';
 }
 
-void add()
+long long div()
 {
-    memset(c, 0, 1010);
-    for (int i = 0; i < 505; i++)
+    memset(c, 0, 2 * LEN);
+    long long r = 0;
+    for (int i = LEN - 1; i >= 0; i--)
     {
-        c[i] += a[i] + b[i];
-        if (c[i] >= 10)
-        {
-            c[i + 1]++;
-            c[i] -= 10;
-        }
+        r = r * 10 + a[i];
+        c[i] = r / b;
+        r %= b;
     }
+    return r;
 }
 
 void print()
 {
-    int pos = 504;
+    int pos = LEN - 1;
     while (pos > 0 && c[pos] == 0)
         pos--;
     for (int i = pos; i >= 0; i--)
@@ -51,8 +53,8 @@ void print()
 int main()
 {
     read(a);
-    read(b);
-    add();
+    cin >> b;
+    div();
     print();
 
     return 0;
